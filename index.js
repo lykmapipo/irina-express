@@ -1,8 +1,13 @@
 'use strict';
 
+
 //dependencies
-var _ = reuqire('lodash');
+var _ = require('lodash');
 var express = require('express');
+var router = express.Router();
+
+//HTTP endpoints
+
 
 /**
  * @function
@@ -11,5 +16,25 @@ var express = require('express');
  * @public
  */
 module.exports = exports = function IrinaExpress(options) {
+    //prepare options
     options = options || {};
+
+    //extend defaults options
+    //with custom options
+    var defaults = {
+        model: 'User'
+    };
+
+    options = _.merge(defaults, options);
+
+
+    //--------------------------------------------------------------------------
+    //
+    //--------------------------------------------------------------------------
+
+
+    /**
+     * @description return irina express router
+     */
+    return router;
 };
