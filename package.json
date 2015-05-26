@@ -67,7 +67,9 @@
         "mongoose-hidden": "^0.4.1",
         "supertest": "^1.0.1"
     },
-    "dependencies": {},
+    "dependencies": {
+        "inflection": "^1.7.1"
+    },
     "peerDependencies": {
         "irina": "^0.1.0"
     }

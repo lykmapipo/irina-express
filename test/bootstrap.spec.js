@@ -3,16 +3,18 @@
 //dependencies
 var async = require('async');
 var mongoose = require('mongoose');
+mongoose.plugin(require('mongoose-hidden')());
+mongoose.plugin(require('mongoose-autopopulate'));
 var Schema = mongoose.Schema;
 var irina = require('irina');
 
+//create user model
+var UserSchema = new Schema({});
+UserSchema.plugin(irina);
+mongoose.model('User', UserSchema);
+
 
 before(function(done) {
-    //create user model
-    var UserSchema = new Schema({});
-    UserSchema.plugin(irina);
-    mongoose.model('User', UserSchema);
-
     //setup database
     mongoose.connect('mongodb://localhost/irina-express', done);
 });

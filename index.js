@@ -3,6 +3,7 @@
 
 //dependencies
 var _ = require('lodash');
+var inflection = require('inflection');
 var express = require('express');
 var router = express.Router();
 
@@ -16,21 +17,20 @@ var router = express.Router();
  * @public
  */
 module.exports = exports = function IrinaExpress(options) {
-    //prepare options
     options = options || {};
 
-    //extend defaults options
-    //with custom options
+    //default options
     var defaults = {
         model: 'User'
     };
 
+    //merge default options with custom provide options
     options = _.merge(defaults, options);
 
-
-    //--------------------------------------------------------------------------
-    //
-    //--------------------------------------------------------------------------
+    //deduce mount path
+    options.route =
+        options.route ||
+        inflection.pluralize(options.model.toLowerCase());
 
 
     /**
