@@ -55,7 +55,7 @@
         "grunt-contrib-jshint": "^0.11.2",
         "grunt-contrib-watch": "^0.6.1",
         "grunt-mocha-test": "^0.12.7",
-        "irina": "^0.1.0",
+        "irina": "^0.1.1",
         "jshint-stylish": "^1.0.1",
         "lodash": "^3.9.2",
         "mocha": "^2.2.4",
@@ -65,6 +65,7 @@
         "mongoose": "^4.0.3",
         "mongoose-autopopulate": "^0.1.0",
         "mongoose-hidden": "^0.4.1",
+        "mongoose-valid8": "^0.1.0",
         "supertest": "^1.0.1"
     },
     "dependencies": {
