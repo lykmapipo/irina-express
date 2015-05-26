@@ -32,8 +32,6 @@ describe('Signup', function() {
                 expect(response.statusCode).to.equal(201);
 
                 expect(_user.email).to.equal(user.email);
-                expect(_user.confirmationToken).to.exist;
-                expect(_user.registeredAt).to.exist;
 
                 done();
             }

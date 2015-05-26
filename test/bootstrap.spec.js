@@ -3,8 +3,12 @@
 //dependencies
 var async = require('async');
 var mongoose = require('mongoose');
+
+//apply plugins
+mongoose.plugin(require('mongoose-valid8'));
 mongoose.plugin(require('mongoose-hidden')());
 mongoose.plugin(require('mongoose-autopopulate'));
+
 var Schema = mongoose.Schema;
 var irina = require('irina');
 
