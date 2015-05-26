@@ -55,7 +55,7 @@
         "grunt-contrib-jshint": "^0.11.2",
         "grunt-contrib-watch": "^0.6.1",
         "grunt-mocha-test": "^0.12.7",
-        "irina": "^0.1.1",
+        "irina": "^0.1.4",
         "jshint-stylish": "^1.0.1",
         "lodash": "^3.9.2",
         "mocha": "^2.2.4",
@@ -72,6 +72,6 @@
         "inflection": "^1.7.1"
     },
     "peerDependencies": {
-        "irina": "^0.1.0"
+        "irina": "^0.1.4"
     }
 }
